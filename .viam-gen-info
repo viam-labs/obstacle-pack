@@ -1,0 +1,13 @@
+{
+  "module_name": "obstacle-pack",
+  "visibility": "public",
+  "namespace": "viam",
+  "language": "go",
+  "resource_type": "component",
+  "resource_subtype": "generic",
+  "model_name": "obstacle-from-mesh",
+  "initialize_git": false,
+  "generator_version": "0.1.0",
+  "generated_on": "2026-05-08T16:12:55.81131Z",
+  "module_readme_link": "README.md"
+}
