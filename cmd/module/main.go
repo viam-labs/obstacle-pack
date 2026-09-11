@@ -11,5 +11,6 @@ import (
 func main() {
 	module.ModularMain(
 		resource.APIModel{API: generic.API, Model: obstaclepack.ObstacleFromMesh},
+		resource.APIModel{API: generic.API, Model: obstaclepack.Obstacle},
 	)
 }

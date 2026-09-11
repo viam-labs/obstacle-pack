@@ -3,7 +3,7 @@
   "module_id": "viam:obstacle-pack",
   "visibility": "public",
   "url": "https://github.com/viam-labs/obstacle-pack",
-  "description": "Modular generic component: obstacle-from-mesh",
+  "description": "Modular generic components: obstacle, obstacle-from-mesh",
   "applications": null,
   "markdown_link": "README.md",
   "entrypoint": "bin/obstacle-pack",
@@ -12,6 +12,11 @@
     "build": "make module.tar.gz",
     "setup": "make setup",
     "path": "module.tar.gz",
-    "arch": ["linux/amd64", "linux/arm64", "darwin/arm64", "windows/amd64"]
+    "arch": [
+      "linux/amd64",
+      "linux/arm64",
+      "darwin/arm64",
+      "windows/amd64"
+    ]
   }
 }

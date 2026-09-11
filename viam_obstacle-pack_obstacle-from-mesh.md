@@ -2,7 +2,10 @@
 
 A generic component that loads a mesh from a [PLY](https://en.wikipedia.org/wiki/PLY_(file_format)) file at startup and exposes it via `Geometries`.
 
-> **Note:** This model is registered under the `rdk:component:generic` API. The generic API gRPC server in RDK does **not** implement `GetGeometries`, so the mesh will not be picked up by the motion planner or frame system automatically. If you want the mesh to act as a collision obstacle for motion planning, use [`viam:obstacle-pack:obstacle-from-mesh-gripper`](viam_obstacle-pack_obstacle-from-mesh-gripper.md) instead. Use this generic variant when you only need to read the geometry from application code (e.g. via the SDK's `GetGeometries` client call against the gripper API, or for introspection purposes).
+> **Note:** This model is registered under the `rdk:component:generic` API. The generic API
+> serves `GetGeometries`, and the frame system will pick the mesh up for motion planning as
+> long as the component is configured with a `frame` that has a `parent` and does not itself
+> declare a `geometry`.
 
 ## Configuration
 
