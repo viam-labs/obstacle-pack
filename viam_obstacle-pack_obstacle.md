@@ -36,7 +36,7 @@ To load an obstacle from a mesh file instead, see
 
 | Name         | Type  | Inclusion | Description                                                                                                                                               |
 |--------------|-------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `geometries` | array | Required  | One or more geometry definitions in the standard Viam geometry format (`box`, `sphere`, `capsule`). Poses are relative to the component's own frame origin. |
+| `geometries` | array | Optional  | Geometry definitions in the standard Viam geometry format (`box`, `sphere`, `capsule`). Poses are relative to the component's own frame origin. Omitting it, or giving an empty list, is accepted and yields an obstacle with no geometries. |
 
 Each entry uses the same schema as a `frame` geometry: `type` plus its dimensions
 (`x`/`y`/`z` for a box, `r` for a sphere, `r`/`l` for a capsule), an optional

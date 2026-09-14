@@ -40,24 +40,14 @@ func (cfg *ObstacleConfig) ParseGeometries() ([]spatialmath.Geometry, error) {
 	return gs, nil
 }
 
-// Validate ensures all parts of the config are valid and important fields exist.
+// Validate ensures the configured geometries can be parsed.
 // Returns three values:
 //  1. Required dependencies: other resources that must exist for this resource to work.
 //  2. Optional dependencies: other resources that may exist but are not required.
 //  3. An error if any Config fields are missing or invalid.
-//
-// The `path` parameter indicates
-// where this resource appears in the machine's JSON configuration
-// (for example, "components.0"). You can use it in error messages
-// to indicate which resource has a problem.
 func (cfg *ObstacleConfig) Validate(path string) ([]string, []string, error) {
-	if len(cfg.Geometries) == 0 {
-		return nil, nil, resource.NewConfigValidationFieldRequiredError(path, "geometries")
-	}
-	if _, err := cfg.ParseGeometries(); err != nil {
-		return nil, nil, resource.NewConfigValidationError(path, err)
-	}
-	return nil, nil, nil
+	_, err := cfg.ParseGeometries()
+	return nil, nil, err
 }
 
 type obstaclePackObstacle struct {
