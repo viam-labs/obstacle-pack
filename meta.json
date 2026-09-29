@@ -3,7 +3,27 @@
   "module_id": "viam:obstacle-pack",
   "visibility": "public",
   "url": "https://github.com/viam-labs/obstacle-pack",
-  "description": "Modular generic components: obstacle, obstacle-from-mesh",
+  "description": "Modular obstacle resources: obstacle, obstacle-from-mesh, world-state-aggregator",
+  "models": [
+    {
+      "api": "rdk:component:generic",
+      "model": "viam:obstacle-pack:obstacle-from-mesh",
+      "markdown_link": "viam_obstacle-pack_obstacle-from-mesh.md",
+      "short_description": "Generic component that loads a PLY mesh and exposes it as a geometry via GetGeometries."
+    },
+    {
+      "api": "rdk:component:generic",
+      "model": "viam:obstacle-pack:obstacle",
+      "markdown_link": "viam_obstacle-pack_obstacle.md",
+      "short_description": "Generic component that exposes box/sphere/capsule primitives declared in config via GetGeometries."
+    },
+    {
+      "api": "rdk:service:world_state_store",
+      "model": "viam:obstacle-pack:world-state-aggregator",
+      "markdown_link": "viam_obstacle-pack_world-state-aggregator.md",
+      "short_description": "In-memory world state store that aggregates transforms pushed by producers via DoCommand."
+    }
+  ],
   "applications": null,
   "markdown_link": "README.md",
   "entrypoint": "bin/obstacle-pack",
