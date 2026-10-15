@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	go.viam.com/api v0.1.590
-	go.viam.com/rdk v1.11.0
+	go.viam.com/rdk v1.12.0
 	go.viam.com/test v1.2.5
 	google.golang.org/protobuf v1.36.12
 )
