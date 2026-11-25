@@ -3,7 +3,7 @@ module obstaclepack
 go 1.26.10
 
 require (
-	go.viam.com/api v0.1.607
+	go.viam.com/api v0.1.610
 	go.viam.com/rdk v1.17.0
 	go.viam.com/test v1.2.5
 	google.golang.org/protobuf v1.36.12
